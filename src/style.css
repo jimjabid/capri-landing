@@ -1,21 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 @import "tailwindcss";
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Import Bubblegum Sans font */
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 /* Custom utility class for Bubblegum Sans font */
 @layer utilities {
-  .permanent-marker-regular {
-    font-family: "Permanent Marker", cursive;
+  .poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
     font-weight: 400;
     font-style: normal;
-  } 
-  .permanent-marker-bold {
-    font-family: "Permanent Marker", cursive;
-    font-weight: 700;
-    font-style: bold;
   }
 }
 

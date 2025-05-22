@@ -5,12 +5,12 @@ document.querySelector('#app').innerHTML = `
   <div class="min-h-screen flex flex-col text-white">
     <!-- Header (sticky) -->
     <header class="sticky top-0 z-50 bg-opacity-90 bg-[#0a0f07] backdrop-blur-sm py-4 px-6 flex justify-between items-center">
-      <div class="text-[#ffa7a3] text-2xl font-bold permanent-marker-bold">CAPRI CLUB</div>
+      <div class="text-[#ffa7a3] text-2xl font-bold poetsen-one-regular ">CAPRI CLUB</div>
       <nav class="hidden md:flex space-x-6 text-white">
         <a href="#" class="hover:text-[#ffa7a3] transition-colors">Home</a>
-        <a href="#events" class="hover:text-[#ffa7a3] transition-colors">Events</a>
-        <a href="#gallery" class="hover:text-[#ffa7a3] transition-colors">Gallery</a>
-        <a href="#contact" class="hover:text-[#ffa7a3] transition-colors">Contact</a>
+        <a href="#events" class="hover:text-[#ffa7a3] transition-colors">Eventos</a>
+        <a href="#gallery" class="hover:text-[#ffa7a3] transition-colors">Galeria</a>
+        <a href="#contact" class="hover:text-[#ffa7a3] transition-colors">Contacto</a>
       </nav>
       <button class="md:hidden" id="mobile-menu-button">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,7 +39,7 @@ document.querySelector('#app').innerHTML = `
         <div class="absolute inset-0 bg-[url('https://scontent-gig4-1.xx.fbcdn.net/v/t39.30808-6/473424257_10161614460522217_1078364924807963987_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=ceIdyxNULPwQ7kNvwHQ58CZ&_nc_oc=Adn9RgOSjtFbP3zdFdH0bhKel9CbaCXjRYicmQdfbeuyYodCo1zMWJWss6w8JDGOcY0&_nc_zt=23&_nc_ht=scontent-gig4-1.xx&_nc_gid=KscZyxawNuBTz6tbaZKVZQ&oh=00_AfKWS8uo4Kd5xhlQ2p5R6TJOZ89ZKqGa1C45RR9eKcgkgw&oe=68355693')] bg-cover bg-center blur-sm opacity-50"></div>
       </div>
       <div class="z-10 text-center px-4">
-        <h1 class="text-6xl md:text-8xl font-bold mb-4 text-[#ffa7a3] permanent-marker-bold">Capri Club</h1>
+        <h1 class="text-6xl md:text-8xl font-bold mb-4 text-[#ffa7a3] poetsen-one-regular ">Capri Club</h1>
         <p class="text-xl md:text-2xl mb-8 text-white italic">La mejor fiesta del Sur de Italia; en el corazón de la Zona T.</p>
         <button class="bg-[#ffa7a3] text-[#0a0f07] font-bold px-8 py-3 rounded-md shadow-md hover:scale-105 transition-all duration-300">
           Reserva Ahora
@@ -72,7 +72,7 @@ document.querySelector('#app').innerHTML = `
     <!-- Events Section -->
     <section id="events" class="py-16 px-6 bg-gradient-to-b from-[#0a0f07] to-[#111a0b]">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12 text-[#ffa7a3] permanent-marker-bold">Próximos Eventos</h2>
+        <h2 class="text-4xl font-bold text-center mb-12 text-[#ffa7a3] poetsen-one-regular ">Próximos Eventos</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           ${createEventCards()}
         </div>
@@ -82,7 +82,7 @@ document.querySelector('#app').innerHTML = `
     <!-- Gallery Section -->
     <section id="gallery" class="py-16 px-6 bg-[#111a0b]">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12 text-[#ffa7a3] permanent-marker-bold">Galería</h2>
+        <h2 class="text-4xl font-bold text-center mb-12 text-[#ffa7a3] poetsen-one-regular ">Galería</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           ${createGalleryItems()}
         </div>
@@ -93,17 +93,17 @@ document.querySelector('#app').innerHTML = `
     <footer id="contact" class="bg-[#0a0f07] text-white py-12 px-6">
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 class="text-[#ffa7a3] font-bold text-xl mb-4 permanent-marker-bold">Capri Club</h3>
+          <h3 class="text-[#ffa7a3] font-bold text-xl mb-4 poetsen-one-regular ">Capri Club</h3>
           <p class="mb-2">Cl. 83 # 12A - 36 - Floor 3</p>
           <p>Bogotá, Colombia</p>
         </div>
         <div>
-          <h3 class="text-[#ffa7a3] font-bold text-xl mb-4 permanent-marker-bold">Horario</h3>
+          <h3 class="text-[#ffa7a3] font-bold text-xl mb-4 poetsen-one-regular ">Horario</h3>
           <p class="mb-2">Jueves a Sábado</p>
           <p>9:00 PM - 3:00 AM</p>
         </div>
         <div>
-          <h3 class="text-[#ffa7a3] font-bold text-xl mb-4 permanent-marker-bold">Contacto</h3>
+          <h3 class="text-[#ffa7a3] font-bold text-xl mb-4 poetsen-one-regular ">Contacto</h3>
           <p class="mb-2">
             <a href="tel:+573106070083" class="hover:text-[#ffa7a3] transition-colors">+57 310 6070083</a>
           </p>
