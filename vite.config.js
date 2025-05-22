@@ -5,5 +5,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base: '/capri-landing', // Replace with your actual repository name
+  base: '/capri-landing/', // Replace with your actual repository name
 })
