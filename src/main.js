@@ -160,8 +160,8 @@ document.querySelector('#app').innerHTML = `
 function createEventCards() {
   const events = [
     { 
-      date: 'Viernes 23 de Mayo', 
-      title: 'Reggaeton & Crossover', 
+      date: '', 
+      title: 'Capri/Solid Ground/Incognito', 
       image: "https://scontent-gig4-1.xx.fbcdn.net/v/t51.75761-15/491464856_17866268907361332_2670920672412696955_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dypkN0l61vIQ7kNvwEluwKi&_nc_oc=AdlC1IBH4bFqhFtCZYOYHlWm6nenfM1kvHBUO-N1sd7eTGdB9QjYGv1vagIvbWIOAT0&_nc_zt=23&_nc_ht=scontent-gig4-1.xx&_nc_gid=TXgPvYTL9tuAl9Rg836DGA&oh=00_AfIWeCtFThMx1wjBrg3EevlXUOFsCTp_L7i3bH3z2XjBtQ&oe=6837DEAE"
     },
     { 
