@@ -16,7 +16,7 @@
   }
 }
 
-/* Popup animations */
+/* Popup animations and backdrop effects */
 #domain-info-popup {
   opacity: 1;
   transform: scale(1);

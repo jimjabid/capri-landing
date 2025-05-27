@@ -16,8 +16,8 @@ document.querySelector("#app").innerHTML = `
         </p>
         
         <p>
-          Capri Club forma parte de <span class="text-[#837118] font-bold">Solid Group</span> 
-          (solidgroup.com.co), nuestra empresa matriz que opera diversos establecimientos 
+          Capri Club forma parte de <span class="text-[#837118] font-bold">Solid Ground</span> 
+          (solidground.com.co), nuestra empresa matriz que opera diversos establecimientos 
           de entretenimiento en Bogotá.
         </p>
         
@@ -25,7 +25,7 @@ document.querySelector("#app").innerHTML = `
           <p class="text-xs text-[#837118]">
             <strong>CAPRI WORLD S.A.S</strong><br>
             NIT: 901.871.386-5<br>
-            Parte de Solid Group Colombia
+            Parte de Solid Ground Colombia
           </p>
         </div>
       </div>
