@@ -73,7 +73,7 @@ document.querySelector("#app").innerHTML = `
     <section class="relative h-screen flex items-center justify-center">
       <div class="absolute inset-0 bg-[#0a0f07] bg-opacity-70 z-0">
         <!-- Background image with overlay -->
-        <div class="absolute inset-0 bg-[url('images/capri-hero.jpg')] bg-cover bg-center blur-sm opacity-50"></div>
+        <div class="absolute inset-0 bg-[url('/images/capri-hero.jpg')] bg-cover bg-center blur-sm opacity-50"></div>
       </div>
       <div class="z-10 text-center px-4">
         <h1 class="text-6xl md:text-8xl font-bold mb-4 text-[#ffa7a3] poetsen-one-regular ">Capri Club</h1>
