@@ -73,7 +73,7 @@ document.querySelector("#app").innerHTML = `
     <section class="relative h-screen flex items-center justify-center">
       <div class="absolute inset-0 bg-[#0a0f07] bg-opacity-70 z-0">
         <!-- Background image with overlay -->
-        <div class="absolute inset-0 bg-[url('https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/473424257_10161614460522217_1078364924807963987_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=1v-4YIavsOkQ7kNvwF2zS21&_nc_oc=AdlwbxCcPTBpat3GLsVc7gtlOnTG5wDu9nLg0iLImlRr8IgPPwfw8F5uit4s2Vfvs7rzNyXcD0eU5KPPLPADxbaX&_nc_zt=23&_nc_ht=scontent.faep9-2.fna&_nc_gid=c36j-_xtUlhEJyoXPRyKFg&oh=00_AfKRVK4RGAjsgOMdYa7U2xRYpbjYJ0EuIfR-dh-A6Nzi3w&oe=683BB5D3')] bg-cover bg-center blur-sm opacity-50"></div>
+        <div class="absolute inset-0 bg-[url('images/capri-hero.jpg')] bg-cover bg-center blur-sm opacity-50"></div>
       </div>
       <div class="z-10 text-center px-4">
         <h1 class="text-6xl md:text-8xl font-bold mb-4 text-[#ffa7a3] poetsen-one-regular ">Capri Club</h1>
@@ -200,19 +200,19 @@ function createEventCards() {
       date: "",
       title: "Capri/Solid Ground/Incognito",
       image:
-        "https://scontent-gig4-1.xx.fbcdn.net/v/t51.75761-15/491464856_17866268907361332_2670920672412696955_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dypkN0l61vIQ7kNvwEluwKi&_nc_oc=AdlC1IBH4bFqhFtCZYOYHlWm6nenfM1kvHBUO-N1sd7eTGdB9QjYGv1vagIvbWIOAT0&_nc_zt=23&_nc_ht=scontent-gig4-1.xx&_nc_gid=TXgPvYTL9tuAl9Rg836DGA&oh=00_AfIWeCtFThMx1wjBrg3EevlXUOFsCTp_L7i3bH3z2XjBtQ&oe=6837DEAE",
+        "images/evento-1.jpg",
     },
     {
       date: "",
       title: "Black Coffe",
       image:
-        "https://scontent.faep9-2.fna.fbcdn.net/v/t51.75761-15/490419610_17865883485361332_9047439651885537519_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bCdgGmkzV6oQ7kNvwHlK0fa&_nc_oc=Adkf5usO2C-WVQD5Vtw1qrEnifafT0K4yPNq12SF9l7AhmxGeemuj_j55_wimw_6HPt0cmFoh71yhriCRZlL4_MI&_nc_zt=23&_nc_ht=scontent.faep9-2.fna&_nc_gid=5xLUPlYvaL_Ae9299rUADA&oh=00_AfLUyYJ2ioNIFcOgFg9X9ZJk1MsdniQS1RbH8lvnp1RH3w&oe=683BAD3D",
+        "images/evento-2.jpg",
     },
     {
       date: "",
       title: "Ponte",
       image:
-        "https://scontent.faep9-1.fna.fbcdn.net/v/t51.75761-15/488587695_17865517053361332_1603105703555652256_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=t8Am0SIl5MEQ7kNvwHxWpzs&_nc_oc=AdlAWPuwcP3V692RdX5yD9u-IsVqgd63B8Eiayz0ylAP91OR9esimhNd-KrfNVpmcl1LBR1XGrQebrm4rmqnb9iw&_nc_zt=23&_nc_ht=scontent.faep9-1.fna&_nc_gid=WAbaRcVja8jEVGGZo3obuw&oh=00_AfLbq8kEL_dMjNBo5cYCF8WBFN94p9mUju79nMJHcaM79Q&oe=683B840B",
+        "images/evento-3.jpg",
     },
   ];
 
@@ -238,15 +238,14 @@ function createEventCards() {
 
 function createGalleryItems() {
   // Array of sample gallery images
-  const images = [
-    "https://scontent.faep9-1.fna.fbcdn.net/v/t51.75761-15/490295811_17866025046361332_4803766369576903955_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mGx5NqjLXjIQ7kNvwF5XcPz&_nc_oc=AdmRFkRri2I6k1JTeZa3Dxw76Gx26LySzRANt-oP_rlfhfARB8DZOZsxjdz_mq8trfvLXr3y9YMn_-rvL6krEoRX&_nc_zt=23&_nc_ht=scontent.faep9-1.fna&_nc_gid=hTiW-uocuX1J_0517Xtthw&oh=00_AfLBq7kXskmpaFMRPQAPDeJJ-EqwlB7xJY-Ysb4-Gscicw&oe=683B8506",
-    "https://scontent.faep9-1.fna.fbcdn.net/v/t51.75761-15/490985017_17866025055361332_5088864262314374453_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=FmKfIkdcwtQQ7kNvwGhkf3t&_nc_oc=Adnaw6Me2PWQFqteOZBrcgVZTAUBQzaUItHRaJa-gp3eAT0GDB1IM1SsCNr7WA_Njrh4Zk4YdaEbEYUYSpKC1FpC&_nc_zt=23&_nc_ht=scontent.faep9-1.fna&_nc_gid=POIPOeeP45vydGssq67iuA&oh=00_AfKH1B1QAgDSuwbRplNfE8IRUrugk3NR1-nwDbySCLFdsg&oe=683BAC06",
-    "https://scontent.faep9-2.fna.fbcdn.net/v/t51.75761-15/490500313_17866025064361332_6745921240813888897_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9mpzFKUaz-sQ7kNvwGUFl2_&_nc_oc=AdkwaswkSsAAtiZBiIHF9y-GidRFM7Lg36JhgRuzkUIxgBxVgcVwuxU67u4oDv0bIj5G0Fm4lQ2fXEslfNwNxoU4&_nc_zt=23&_nc_ht=scontent.faep9-2.fna&_nc_gid=m9BIVeFBgn8pYlAtjDIbEA&oh=00_AfJZQrDV4g8pvGRx4lXus330Pco_CWIKERFSfZoxJxD5oA&oe=683B962C",
-    "https://scontent.faep9-3.fna.fbcdn.net/v/t51.75761-15/475907231_17856436308361332_5956169966739561474_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qgwkKgQJH5MQ7kNvwFVQ9JB&_nc_oc=Adkuj9qg04ZHMKyrhZ5Z6k2BOnsN9GT7C2vZEMHn0LXv4O5bRYBmBdKTEVqjI1uqGkBMW3JjMRSs6C-bYR2tobwU&_nc_zt=23&_nc_ht=scontent.faep9-3.fna&_nc_gid=i3KFsfrXytfmliV4Wm4G_Q&oh=00_AfI4_jSb4k0UctROjnFVSMYPhOlhI2HlOvHJcE5wNi3dLA&oe=683BAAB0",
-    "https://scontent.faep9-2.fna.fbcdn.net/v/t51.75761-15/475777938_17856436317361332_3231492925795497750_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=97wHDDSGpNsQ7kNvwFWquTG&_nc_oc=AdmffNU53SFrZPbPCDQdXEwJeDxfX15mXg0HbmfbRVl13CtlgtrvAPHbQo4oyzL7_6Bdsrpq7T3I9guotCWADLvn&_nc_zt=23&_nc_ht=scontent.faep9-2.fna&_nc_gid=0sVu_GeigtFC3jiu01hZEQ&oh=00_AfLuQvMexkIuverbmfPuwYuy0h6yCJSu1PWJukoQNF8QTA&oe=683BA35D",
-    "https://scontent.faep9-3.fna.fbcdn.net/v/t51.75761-15/474953493_17855544360361332_8772305109791033479_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=PsLYEomjkzwQ7kNvwFil5sR&_nc_oc=Adl4hjmGLyRhpYX_9jGvQQybdzfbaGMFfTdHyypBclFICT8FKTAkiqmtab9-nO1ykDBhs2M7eHspp2cmp5XtglwA&_nc_zt=23&_nc_ht=scontent.faep9-3.fna&_nc_gid=M11BydDWDUkuNSV1jHddSw&oh=00_AfK_fhCGkuJayLwAOuwuKybQqcl_B1sk7DxAi35_NZ6FQA&oe=683B86C8",
-    "https://scontent.faep9-3.fna.fbcdn.net/v/t51.75761-15/474797634_17855544369361332_2606718780490318138_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6c_DQCNJdo8Q7kNvwFOy3sx&_nc_oc=Adk2oNCqNmnUg-PxOaeulWnZPmozEiBqTLxphClOoLv9trZKBqy3WXInOWUB4O0-WfKcUS90vO5afE-ckPNLu2Xp&_nc_zt=23&_nc_ht=scontent.faep9-3.fna&_nc_gid=NRkenjOtjaHX1kywI2aQDw&oh=00_AfKaEaFsqoO1nZBYZSmDCV8zbGWAESyRQz3zQSEEGGoVWw&oe=683B9A2A",
-    "https://scontent.faep9-1.fna.fbcdn.net/v/t51.75761-15/474215130_17854626516361332_8228469687427735458_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=VwbrqKuf3x4Q7kNvwHwLIjw&_nc_oc=AdlQ4leoMp_OJinKwet2n1a-zPKa4xB8J8Bf3i9SUbWQQ_hBruoGqeYPM-uOhdFGgW43pKdGcG29FoIAyLQY3D22&_nc_zt=23&_nc_ht=scontent.faep9-1.fna&_nc_gid=q_tOkHmTTgjQQg-u_AteEw&oh=00_AfJmZicfy73snb5qOa2zCkfvdX82QlCqLXoDDZDSDHjWfA&oe=683B9AF8",
+  const images = ["images/galeria-1.jpg",
+    "images/galeria-2.jpg",
+    "images/galeria-3.jpg",
+    "images/galeria-4.jpg",
+    "images/galeria-5.jpg",
+    "images/galeria-6.jpg",
+    "images/galeria-7.jpg",
+    "images/galeria-8.jpg",
   ];
 
   return images
