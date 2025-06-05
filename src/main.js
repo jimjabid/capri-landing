@@ -78,9 +78,11 @@ document.querySelector("#app").innerHTML = `
       <div class="z-10 text-center px-4">
         <h1 class="text-6xl md:text-8xl font-bold mb-4 text-[#ffa7a3] poetsen-one-regular ">Capri Club</h1>
         <p class="text-xl md:text-2xl mb-8 text-white italic">La mejor fiesta del Sur de Italia; en el corazón de la Zona T.</p>
-        <button class="bg-[#ffa7a3] text-[#0a0f07] font-bold px-8 py-3 rounded-md shadow-md hover:scale-105 transition-all duration-300">
-          Reserva Ahora
-        </button>
+        <a href="https://wa.me/573106070083" target="_blank">
+          <button class="bg-[#ffa7a3] text-[#0a0f07] font-bold px-8 py-3 rounded-md shadow-md hover:scale-105 transition-all duration-300">
+            Reserva Ahora
+          </button>
+        </a>
       </div>
     </section>
 
