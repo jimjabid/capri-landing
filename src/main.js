@@ -1,6 +1,52 @@
 import "./style.css";
 
-document.querySelector("#app").innerHTML = `
+// Loading animation HTML
+const loadingHTML = `
+  <div id="loading-screen" class="fixed inset-0 z-[200] bg-[#0a0f07] flex items-center justify-center">
+    <div class="text-center">
+      <!-- Animated Logo -->
+      <div class="mb-8">
+        <h1 class="text-6xl md:text-8xl font-bold text-[#ffa7a3] poetsen-one-regular animate-pulse">
+          CAPRI CLUB
+        </h1>
+        <div class="w-32 h-1 bg-gradient-to-r from-[#ffa7a3] to-[#837118] mx-auto mt-4 animate-pulse"></div>
+      </div>
+      
+      <!-- Animated Particles -->
+      <div class="relative w-64 h-64 mx-auto mb-8">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-32 h-32 border-2 border-[#ffa7a3] rounded-full animate-spin"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-24 h-24 border-2 border-[#837118] rounded-full animate-spin" style="animation-direction: reverse; animation-duration: 3s;"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-16 h-16 border-2 border-[#ffa7a3] rounded-full animate-spin" style="animation-duration: 2s;"></div>
+        </div>
+        
+        <!-- Floating particles -->
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+      </div>
+      
+      <!-- Progress Bar -->
+      <div class="w-64 mx-auto mb-4">
+        <div class="bg-[#111a0b] rounded-full h-2 overflow-hidden">
+          <div id="progress-bar" class="bg-gradient-to-r from-[#ffa7a3] to-[#837118] h-full rounded-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+      </div>
+      
+      <!-- Loading Text -->
+      <p class="text-[#837118] text-lg animate-pulse">Cargando la mejor fiesta...</p>
+    </div>
+  </div>
+`;
+
+// Main content HTML (existing code)
+const mainContentHTML = `
   <!-- Popup Modal -->
   <div id="domain-info-popup" class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
     <div class="bg-[#0a0f07] border-2 border-[#ffa7a3] rounded-lg p-8 mx-4 max-w-md w-full text-center shadow-2xl">
@@ -195,6 +241,91 @@ document.querySelector("#app").innerHTML = `
   </div>
 `;
 
+// Initialize the page
+document.querySelector("#app").innerHTML = loadingHTML;
+
+// Loading animation function
+function startLoadingAnimation() {
+  const progressBar = document.getElementById('progress-bar');
+  let progress = 0;
+  
+  const interval = setInterval(() => {
+    progress += Math.random() * 15;
+    if (progress > 100) progress = 100;
+    
+    progressBar.style.width = progress + '%';
+    
+    if (progress >= 100) {
+      clearInterval(interval);
+      setTimeout(() => {
+        // Hide loading screen with fade out
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.transform = 'scale(1.1)';
+        
+        setTimeout(() => {
+          // Show main content
+          document.querySelector("#app").innerHTML = mainContentHTML;
+          initializeMainContent();
+        }, 500);
+      }, 500);
+    }
+  }, 100);
+}
+
+// Initialize main content functionality
+function initializeMainContent() {
+  // Popup functionality
+  const popup = document.getElementById("domain-info-popup");
+  const closePopupButton = document.getElementById("close-popup");
+
+  // Show popup on page load
+  popup.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+
+  // Close popup functionality
+  closePopupButton.addEventListener("click", () => {
+    popup.style.opacity = "0";
+    popup.style.transform = "scale(0.95)";
+
+    setTimeout(() => {
+      popup.classList.add("hidden");
+      document.body.style.overflow = "auto";
+    }, 300);
+  });
+
+  // Close popup when clicking outside (optional)
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      closePopupButton.click();
+    }
+  });
+
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const closeMenuButton = document.getElementById("close-menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  });
+
+  closeMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    document.body.style.overflow = "auto";
+  });
+
+  // Close menu when clicking on links
+  const mobileLinks = mobileMenu.querySelectorAll("a");
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      document.body.style.overflow = "auto";
+    });
+  });
+}
+
 // Helper functions to generate content
 function createEventCards() {
   const events = [
@@ -261,58 +392,8 @@ function createGalleryItems() {
     .join("");
 }
 
-// Mobile menu toggle functionality
+// Start the loading animation when the page loads
 document.addEventListener("DOMContentLoaded", () => {
-  // Popup functionality
-  const popup = document.getElementById("domain-info-popup");
-  const closePopupButton = document.getElementById("close-popup");
-
-  // Show popup on page load
-  popup.classList.remove("hidden");
-  document.body.style.overflow = "hidden";
-
-  // Close popup functionality
-  closePopupButton.addEventListener("click", () => {
-    popup.style.opacity = "0";
-    popup.style.transform = "scale(0.95)";
-
-    setTimeout(() => {
-      popup.classList.add("hidden");
-      document.body.style.overflow = "auto";
-    }, 300);
-  });
-
-  // Close popup when clicking outside (optional)
-  popup.addEventListener("click", (e) => {
-    if (e.target === popup) {
-      closePopupButton.click();
-    }
-  });
-
-  // Existing mobile menu code
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const closeMenuButton = document.getElementById("close-menu");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  mobileMenuButton.addEventListener("click", () => {
-    mobileMenu.classList.remove("hidden");
-    document.body.style.overflow = "hidden";
-  });
-
-  closeMenuButton.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-    document.body.style.overflow = "auto";
-  });
-
-  // Close menu when clicking on links
-  const mobileLinks = mobileMenu.querySelectorAll("a");
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-      document.body.style.overflow = "auto";
-    });
-  });
+  startLoadingAnimation();
 });
 
-// Initialize the counter
-setupCounter(document.querySelector("#counter"));

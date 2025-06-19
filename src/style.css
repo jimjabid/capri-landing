@@ -16,6 +16,77 @@
   }
 }
 
+/* Loading screen animations */
+#loading-screen {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Particle animations */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffa7a3;
+  border-radius: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.particle-1 {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+  animation-duration: 4s;
+}
+
+.particle-2 {
+  top: 60%;
+  right: 20%;
+  animation-delay: 0.5s;
+  animation-duration: 3.5s;
+  background: #837118;
+}
+
+.particle-3 {
+  bottom: 30%;
+  left: 30%;
+  animation-delay: 1s;
+  animation-duration: 4.5s;
+}
+
+.particle-4 {
+  top: 40%;
+  right: 40%;
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+  background: #837118;
+}
+
+.particle-5 {
+  bottom: 20%;
+  right: 30%;
+  animation-delay: 2s;
+  animation-duration: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-15px) translateX(15px);
+    opacity: 0.9;
+  }
+}
+
 /* Popup animations and backdrop effects */
 #domain-info-popup {
   opacity: 1;
@@ -36,4 +107,23 @@
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+/* Enhanced loading animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Progress bar glow effect */
+#progress-bar {
+  box-shadow: 0 0 10px rgba(255, 167, 163, 0.5);
 }
